@@ -1,7 +1,5 @@
 package com.company.controller;
 
-import com.company.config.AppConfig;
-import com.company.config.WebMvcConfig;
 import com.gargoylesoftware.htmlunit.UnexpectedPage;
 import com.gargoylesoftware.htmlunit.WebClient;
 import org.junit.Before;
@@ -19,10 +17,8 @@ import org.springframework.web.context.WebApplicationContext;
 import java.io.InputStream;
 
 
-//@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = {AppConfig.class, WebMvcConfig.class})
-//@ContextConfiguration(locations = {"file:/Users/daiweilu/dev/_temp/SpringTestPractice/src/main/resources/application-context.xml"})
+@ContextConfiguration(locations = {"file:src/main/resources/application-context.xml"})
 @WebAppConfiguration
 public class HelloControllerIntegrationTest {
 
